@@ -17,6 +17,33 @@
 
 #pragma once
 
+//////////////////// INIT of customized defines
+
+#undef USE_PPM
+#undef USE_PWM
+#undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+#undef USE_SERIALRX_SBUS       // Frsky and Futaba receivers
+#undef USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
+#undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undef USE_SERIALRX_SUMH       // Graupner legacy protocol
+#undef USE_SERIALRX_XBUS       // JR
+
+#undef LED_STRIP
+#undef TELEMETRY_FRSKY
+#undef TELEMETRY_HOTT
+#undef TELEMETRY_LTM
+#undef TELEMETRY_SMARTPORT
+#undef USE_SERVOS
+
+//#undef USE_RESOURCE_MGMT
+
+#define GPS
+#define USE_SERIAL_4WAY_BLHELI_INTERFACE
+#define CMS
+#define USE_MSP_DISPLAYPORT
+
+//////////////////// END of customized defines
+
 #define TELEMETRY_IBUS
 
 #define TARGET_CONFIG
@@ -50,7 +77,8 @@
 
 #define INVERTER_PIN_UART2        PB2 // PB2 (BOOT1) abused as inverter select GPIO
 
-#define USE_RX_MSP
+////// FREE SPACE
+//#define USE_RX_MSP
 
 #define USE_EXTI
 #define MAG_INT_EXTI            PC14
@@ -77,38 +105,41 @@
 #define USE_FLASH_M25P16
 
 #define GYRO
-#define USE_GYRO_MPU3050
-#define USE_GYRO_MPU6050
+
+////////////////// INIT of free space
+//#define USE_GYRO_MPU3050
+//#define USE_GYRO_MPU6050
 #define USE_GYRO_MPU6500
 #define USE_GYRO_SPI_MPU6500
 
-#define GYRO_MPU3050_ALIGN      CW0_DEG
-#define GYRO_MPU6050_ALIGN      CW0_DEG
+//#define GYRO_MPU3050_ALIGN      CW0_DEG
+//#define GYRO_MPU6050_ALIGN      CW0_DEG
 #define GYRO_MPU6500_ALIGN      CW0_DEG
 
 #define ACC
-#define USE_ACC_ADXL345
+//#define USE_ACC_ADXL345
 #define USE_ACC_BMA280
-#define USE_ACC_MMA8452
-#define USE_ACC_MPU6050
+//#define USE_ACC_MMA8452
+//#define USE_ACC_MPU6050
 #define USE_ACC_MPU6500
 #define USE_ACC_SPI_MPU6500
 
 #define ACC_ADXL345_ALIGN       CW270_DEG
-#define ACC_MPU6050_ALIGN       CW0_DEG
-#define ACC_MMA8452_ALIGN       CW90_DEG
+//#define ACC_MPU6050_ALIGN       CW0_DEG
+//#define ACC_MMA8452_ALIGN       CW90_DEG
 #define ACC_BMA280_ALIGN        CW0_DEG
 #define ACC_MPU6500_ALIGN       CW0_DEG
 
 #define BARO
-#define USE_BARO_MS5611 // needed for Flip32 board
+//#define USE_BARO_MS5611 // needed for Flip32 board
 #define USE_BARO_BMP280
 
-/*
+////////////////// END of free space
+
+////////////////////// ADDED MAG
 #define MAG
 #define USE_MAG_HMC5883
 #define MAG_HMC5883_ALIGN       CW180_DEG
-*/
 
 //#define SONAR
 //#define SONAR_TRIGGER_PIN       PB0
