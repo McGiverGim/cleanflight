@@ -17,6 +17,32 @@
 
 #pragma once
 
+//////////////////// INIT of customized defines
+
+#undef USE_PPM
+#undef USE_PWM
+#undef USE_SERIALRX_CRSF       // Team Black Sheep Crossfire protocol
+#undef USE_SERIALRX_SBUS       // Frsky and Futaba receivers
+#undef USE_SERIALRX_SPEKTRUM   // SRXL, DSM2 and DSMX protocol
+#undef USE_SERIALRX_SUMD       // Graupner Hott protocol
+#undef USE_SERIALRX_SUMH       // Graupner legacy protocol
+#undef USE_SERIALRX_XBUS       // JR
+
+#undef LED_STRIP
+#undef TELEMETRY_FRSKY
+#undef TELEMETRY_HOTT
+#undef TELEMETRY_LTM
+#undef TELEMETRY_SMARTPORT
+#undef USE_SERVOS
+
+#define GPS
+
+#undef USE_RESOURCE_MGMT
+#define CMS
+#define USE_MSP_DISPLAYPORT
+
+//////////////////// END of customized defines
+
 #define TELEMETRY_IBUS
 
 #define TARGET_CONFIG
@@ -101,9 +127,10 @@
 #define USE_BARO_MS5611 // needed for Flip32 board
 #define USE_BARO_BMP280
 
-//#define MAG
-//#define USE_MAG_HMC5883
-//#define MAG_HMC5883_ALIGN       CW180_DEG
+////////////////////// ADDED MAG
+#define MAG
+#define USE_MAG_HMC5883
+#define MAG_HMC5883_ALIGN       CW180_DEG
 
 //#define SONAR
 //#define SONAR_TRIGGER_PIN       PB0/PB8
